@@ -1,0 +1,107 @@
+{
+  "dataset": "CIC-IoT-DiAD-2024",
+  "data_dir": "E:\\Sentinel\\data\\cic_iot_diad_2024",
+  "training_features": [
+    "Flow Bytes/s",
+    "Flow IAT Mean",
+    "Packet Length Variance",
+    "Total Length of Fwd Packet",
+    "Average Packet Size",
+    "Packet Length Std",
+    "Total Fwd Packet",
+    "Fwd Header Length",
+    "Flow Duration",
+    "RST Flag Count",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "Flow Packets/s",
+    "Fwd Packet Length Mean",
+    "Bwd Packet Length Mean",
+    "Fwd Packets/s",
+    "Bwd Packets/s",
+    "Packet Length Mean",
+    "Flow IAT Std",
+    "Down/Up Ratio",
+    "Fwd Packet Length Max",
+    "Bwd Packet Length Max",
+    "Total Bwd packets",
+    "Total Length of Bwd Packet",
+    "syn_to_fin",
+    "rst_ratio",
+    "bytes_per_packet",
+    "fwd_bwd_ratio",
+    "pkt_size_ratio",
+    "flag_sum",
+    "iat_x_variance",
+    "duration_x_rate",
+    "log_Flow Bytes/s",
+    "log_Flow Packets/s",
+    "log_Flow IAT Mean",
+    "log_Packet Length Variance",
+    "log_Total Length of Fwd Packet",
+    "log_Flow Duration"
+  ],
+  "benign_label": "Benign",
+  "device_classes": [
+    "cctv",
+    "router",
+    "door_lock",
+    "smart_light",
+    "laptop"
+  ],
+  "model_params": {
+    "n_estimators": 300,
+    "contamination": 0.01,
+    "max_samples": 0.8,
+    "max_features": 0.8,
+    "random_state": 42
+  },
+  "optimal_threshold": -0.31968757724481767,
+  "metrics": {
+    "accuracy": 0.9082600232528267,
+    "normal_accuracy": 0.46446,
+    "attack_detection_rate": 0.9957534727287782,
+    "precision": 0.9041346990358694,
+    "recall": 0.9957534727287782,
+    "f1": 0.9477350085751063,
+    "threshold": -0.31968757724481767
+  },
+  "benign_rows": 50000,
+  "total_rows": 303619,
+  "max_rows_per_folder": 50000,
+  "attack_breakdown": {
+    "BruteForce": {
+      "detected": 3619,
+      "total": 3619,
+      "rate": 1.0
+    },
+    "DDOS": {
+      "detected": 50000,
+      "total": 50000,
+      "rate": 1.0
+    },
+    "DOS": {
+      "detected": 49999,
+      "total": 50000,
+      "rate": 0.99998
+    },
+    "Mirai": {
+      "detected": 49906,
+      "total": 50000,
+      "rate": 0.99812
+    },
+    "Recon": {
+      "detected": 49069,
+      "total": 50000,
+      "rate": 0.98138
+    },
+    "Spoofing": {
+      "detected": 49949,
+      "total": 50000,
+      "rate": 0.99898
+    }
+  },
+  "training_time_seconds": 101.4
+}
